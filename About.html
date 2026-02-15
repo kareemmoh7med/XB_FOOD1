@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Cards</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            /* تم تحديث لون الخلفية والألوان لتبدو أفضل مع البطاقات البيضاء */
+            background-image:url("8d2bf219-e3bb-4b36-9198-e7402646f8c7.jpeg"); 
+            color: #333;
+            direction: ltr;
+            text-align: left;
+        }
+
+        /* Page Header */
+        .page-header {
+            background-color:#e17d7d; /* لون أزرق موحد */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-header h1 {
+            margin: 0;
+        }
+
+        /* Profiles Container (Flexbox for responsive layout) */
+        .profiles-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Profile Card */
+        .profile-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            max-width: calc(33.333% - 20px);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Profile Image */
+        .profile-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Profile Details */
+        .profile-details {
+            padding: 20px;
+        }
+
+        .profile-details h2 { /* Name heading */
+            color: #007bff;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .profile-details p {
+            margin: 5px 0;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .profile-details strong {
+            font-weight: bold;
+            color: #555;
+        }
+
+        /* Social Links (Icon Buttons) */
+        .social-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 50%; /* Makes buttons round */
+            color: white;
+            font-size: 18px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px; 
+            height: 40px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-links a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Specific Social Media Colors */
+        .social-links .facebook {
+            background-color: #3b5998;
+        }
+
+        .social-links .instagram {
+            background-color: #d68493;
+            background-image: linear-gradient(45deg, #f09433 0%, #e66846 25%, #d62261 50%, #af23a6 75%, #5851db 100%);
+        }
+
+        .social-links .linkedin {
+            background-color: #0077b5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .profile-card {
+                width: calc(50% - 20px);
+                max-width: 450px;
+            }
+        }
+        @media (max-width: 600px) {
+            .profile-card {
+                width: 90%;
+                max-width: 400px;
+            }
+        }
+    </style>
+    </head>
+
+<body>
+
+    <header class="page-header">
+        <h1>About Us</h1>
+    </header>
+
+    <div class="profiles-container">
+
+        <div class="profile-card">
+            <img src="WhatsApp Image 2025-12-03 at 2.13.52 PM.jpeg" alt="Karim Mohamed photo" class="profile-img">
+            <div class="profile-details">
+                <h2>Karim Mohamed</h2>
+                
+                <p><strong>Age:</strong> 19 years</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1CZ5gdfMyG/" target="_blank" class="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/kareem_mo7hmed?igsh=MTU2cTRuZG1kZm9zbQ==" target="_blank" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/kareem-mohamed-9979a7333?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="profile-card">
+            <img src="WhatsApp Image 2025-12-03 at 2.13.39 PM.jpeg" alt="Mohamed Ahmed photo" class="profile-img">
+            <div class="profile-details">
+                <h2>Mohamed Ahmed</h2>
+                <p><strong>Age:</strong> 20 years</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/an.migoo?mibextid=ZbWKwL" target="_blank" class="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/accounts/login/?next=%2Fmohamed_ahmed7_6%2F&source=omni_redirect" target="_blank" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/mohamed-ahmed-saeed-54181434b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <img src="WhatsApp Image 2025-12-03 at 2.28.33 PM.jpeg" alt="Mohamed Gaber photo" class="profile-img">
+            <div class="profile-details">
+                <h2>Mohamed Gaber</h2>
+                <p><strong>Age:</strong> 19 years</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/166ZZJhR26/" target="_blank" class="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="" target="_blank" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/mohamed-gaber-mohamed-212360351?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="profile-card">
+            <img src="315b8b8a-e837-48c1-85b2-d3cdaadf1bcc.jpeg" alt="Mohamed Ragab photo" class="profile-img">
+            <div class="profile-details">
+                <h2>Mohamed Ragab</h2>
+                <p><strong>Age:</strong> 20 years</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1DDZDDLvab/" target="_blank" class="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/moalwinch?igsh=Nm80cmE3MjUwaGV3" target="_blank" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/hamo-al-winch-60736034a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <img src="WhatsApp Image 2025-12-03 at 2.12.40 PM.jpeg" alt="Karim Hala photo" class="profile-img">
+            <div class="profile-details">
+                <h2>Karim Hala</h2>
+                <p><strong>Age:</strong> 19 years</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1b6Je5Yany/" target="_blank" class="facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/kemomosaadhelal?igsh=OXg2anNrdnZzd3ht" target="_blank" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="http://www.linkedin.com/in/kareem-helal-9a799b219" target="_blank" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-card">
+            <img src="WhatsApp Image 2025-12-03 at 2.13.09 PM.jpeg" alt="Mohamed Yasser photo" class="profile-img">
+            <div class="profile-details">
+                <h2>Mohamed Yasser</h2>
+                <p><strong>Age:</strong> 21 years</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/MahamedYasser" target="_blank" class="facebook" aria-label="Mahamed Yasser Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/7amo_y3sser/?igsh=MWxxZXhkZzVlbHU2Yg%3D%3D#" target="_blank" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/mahamed-yasser-7268b6332?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

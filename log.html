@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XB Food</title>
+    <link rel="icon" type="image/png" href="Logo.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+        body {
+            background-image: url('xp food.jpeg');
+            background-size: cover;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            animation: fadeInScale 0.8s ease-out forwards;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: right;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .user-label {
+            color: black;
+            font-style: italic;
+            font-weight: bold;
+        }
+        .pass-label {
+            color: black;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #00a8c6;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #00a8c6; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .login-btn:hover {
+            background-color: #056070e1; 
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .links {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #00a8c6;
+            margin: 0 5px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .About {
+            color: black;
+            font-weight: bold;
+        }
+        a.About:hover {
+            color: #056070e1;
+        }
+        a.About:active {
+            color: #03363be1;
+        }
+        a.About:visited {
+            color: #00a8c6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <img src="Logo2.jpeg" width="100px" alt="Xp Food Logo">
+        <h2 style="font-weight: bold;"> <i>Login</i></h2>
+        <form action="success.html" method="get">
+            
+            <div class="input-group">
+                <label for="username" class="user-label">UserName</label>
+                <input type="text" id="username" placeholder="Add Your UserName" required>
+            </div>
+
+            <div class="input-group">
+                <label for="password" class="pass-label">Password</label>
+                <input type="password" id="password" placeholder="Add Your Password" required>
+            </div>
+
+            <button type="submit" class="login-btn">Submit</button>
+            <i style="font-weight: bold;">created by TM</i> 
+            <a href="About.html" class="About">Kareem Mohamed</a>
+        </form>
+    </div>
+
+</body>
+</html>
